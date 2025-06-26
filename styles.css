@@ -1,0 +1,496 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f6f5f6;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: var(--white);
+  font-size: 46px;
+  line-height: 42px;
+  letter-spacing: -1.84px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 24px;
+  letter-spacing: -1.56px;
+}
+
+.highlight {
+  color: var(--yellow-500);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  gap: 32px;
+  max-width: 375px;
+  margin: auto;
+  padding: 32px 16px 40px 16px;
+}
+
+.grid > div {
+  border-radius: 10px;
+}
+
+.grid-item-1 {
+  background-color: var(--purple-500);
+  padding: 40px 32px;
+  display: grid;
+  gap: 24px;
+}
+
+.grid-item-1 h1 {
+  max-width: 250px;
+  margin: auto;
+}
+
+.content-grid-1 {
+  display: grid;
+  gap: 8px;
+  max-width: 221px;
+  margin: auto;
+  color: var(--white);
+}
+
+.content img {
+  padding: 0 14.5px;
+}
+
+.grid-item-2 {
+  background-color: var(--white);
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.grid-item-3 {
+  display: grid;
+  gap: 16px;
+  background-color: var(--yellow-500);
+  padding: 16px 16px 0 16px;
+  overflow: hidden;
+}
+
+.grid-item-3 img {
+  width: 208px;
+  margin-bottom: -20.75px;
+}
+
+.grid-item-4 {
+  background-color: var(--purple-100);
+  padding: 32px 0;
+  display: grid;
+  gap: 24px;
+}
+
+.grid-item-4 h2 {
+  text-align: center;
+}
+
+.grid-item-4 img {
+  padding: 0 17.47px;
+}
+
+.grid-item-4 p {
+  padding: 0 32px;
+  text-align: center;
+}
+
+.grid-item-5 {
+  background-color: var(--purple-500);
+  padding: 24px;
+  display: grid;
+  gap: 40px;
+}
+
+.grid-item-5 h3 {
+  text-align: center;
+  color: var(--white);
+  font-size: 32px;
+  line-height: 28px;
+}
+
+.grid-item-6 {
+  background-color: var(--white);
+  padding: 24px;
+  display: grid;
+  gap: 24px;
+}
+
+.grid-item-6 h2 {
+  font-size: 46px;
+  line-height: 42px;
+  letter-spacing: -1.84px;
+  font-weight: 500;
+}
+
+.grid-item-6 h2 span {
+  display: block;
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.grid-item-7 {
+  background-color: var(--yellow-100);
+  padding: 32px;
+  display: grid;
+  gap: 24px;
+}
+
+.grid-item-7 h2 {
+  font-size: 32px;
+  line-height: 28px;
+  letter-spacing: -1.92px;
+  font-weight: 500;
+}
+
+.grid-item-7 h2 span {
+  color: var(--purple-500);
+  font-style: italic;
+}
+
+.grid-item-7 img {
+  width: 191px;
+}
+
+.grid-item-8 {
+  background-color: var(--yellow-500);
+  padding: 24px;
+  display: grid;
+  gap: 24px;
+}
+
+.grid-item-8 h2 {
+  font-size: 32px;
+  line-height: 28px;
+  letter-spacing: -1.92px;
+  font-weight: 500;
+}
+
+.grid-item-8 img {
+  width: 220px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    max-width: 768px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    padding: 52px 40px 76px 40px;
+    grid-template-areas:
+      "item-1 item-1"
+      "item-2 item-3"
+      "item-4 item-4"
+      "item-5 item-5"
+      "item-6 item-6"
+      "item-7 item-8";
+    gap: 32px;
+  }
+
+  .grid-item-1 {
+    padding: 32px 32px;
+    display: grid;
+    place-content: center;
+    height: 324px;
+    grid-area: item-1;
+  }
+
+  .grid-item-1 h1 {
+    font-size: 54px;
+    line-height: 48px;
+    letter-spacing: -2.16px;
+    max-width: 400px;
+  }
+
+  .content-grid-1 {
+    display: grid;
+    gap: 8px;
+    max-width: 221px;
+    margin: auto;
+    color: var(--white);
+  }
+
+  .content img {
+    padding: 0 14.5px;
+  }
+
+  .grid-item-2 {
+    background-color: var(--white);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: auto;
+    overflow: hidden;
+    grid-area: item-2;
+  }
+
+  .grid-item-2 img {
+    width: 316px;
+  }
+
+  .grid-item-2 h2 {
+    max-width: 208px;
+  }
+
+  .grid-item-3 {
+    grid-area: item-3;
+  }
+
+  .grid-item-4 {
+    grid-area: item-4;
+  }
+
+  .grid-item-4 h2 {
+    text-align: center;
+  }
+
+  .grid-item-4 img {
+    padding: 0;
+    width: 357px;
+    margin: auto;
+  }
+
+  .grid-item-4 p {
+    padding: 0 0;
+    text-align: center;
+    max-width: 359px;
+    margin: auto;
+  }
+
+  .grid-item-5 {
+    background-color: var(--purple-500);
+    padding: 23px 82px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    grid-area: item-5;
+  }
+
+  .grid-item-5 h3 {
+    text-align: left;
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: -2.16px;
+    font-weight: 500;
+  }
+
+  .grid-item-5 img {
+    width: 228px;
+  }
+
+  .grid-item-6 {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: auto;
+    grid-area: item-6;
+  }
+
+  .grid-item-6 h2 {
+    font-size: 54px;
+    line-height: 48px;
+    letter-spacing: -2.16px;
+  }
+
+  .grid-item-6 img {
+    width: 179px;
+  }
+
+  .grid-item-7 {
+    place-content: center;
+    padding: 24px;
+    grid-area: item-7;
+  }
+
+  .grid-item-7 h2 {
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: -2.16px;
+  }
+
+  .grid-item-8 {
+    grid-area: item-8;
+  }
+
+  .grid-item-8 h2 {
+    font-size: 36px;
+    line-height: 30px;
+    letter-spacing: -2.16px;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    max-width: 1120px;
+    padding: 83px 0 65px 0;
+    grid-template-columns: repeat(4, 256px);
+    grid-template-rows: repeat(10, auto);
+    grid-template-areas:
+      "create-post header header schedule"
+      "create-post header header schedule"
+      "create-post header header schedule"
+      "create-post header header schedule"
+      "create-post accounts consistent schedule"
+      "ai-content accounts consistent schedule"
+      "ai-content accounts consistent schedule"
+      "ai-content audience followers followers"
+      "ai-content audience followers followers"
+      "ai-content audience followers followers";
+  }
+
+  .grid-item-1 {
+    grid-area: header;
+  }
+
+  .grid-item-1 h1 {
+    font-size: 62px;
+    line-height: 58px;
+    letter-spacing: -3px;
+    max-width: 400px;
+  }
+
+  .grid-item-2 {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: auto;
+    grid-area: accounts;
+  }
+
+  .grid-item-2 img {
+    width: 316px;
+  }
+
+  .grid-item-2 h2 {
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: -2px;
+  }
+
+  .grid-item-3 {
+    display: grid;
+    padding: 24px 24px 0 24px;
+    overflow: hidden;
+    grid-area: consistent;
+  }
+
+  .grid-item-3 img {
+    width: 208px;
+    margin-bottom: -62px;
+  }
+
+  .grid-item-3 h2 {
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: -2px;
+  }
+
+  .grid-item-4 {
+    grid-area: schedule;
+    overflow: hidden;
+    padding: 50px 32px;
+  }
+
+  .grid-item-4 h2 {
+    text-align: left;
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: -2px;
+    width: 192px;
+  }
+
+  .grid-item-4 img {
+    padding: 0;
+    width: 357px;
+    left: 32px;
+  }
+
+  .grid-item-4 p {
+    padding: 0 0;
+    text-align: left;
+    line-height: 20px;
+    width: 192px;
+    margin: 0;
+  }
+
+  .grid-item-5 {
+    grid-area: followers;
+    padding: 24px;
+    gap: auto;
+  }
+
+  .grid-item-5 h3 {
+    text-align: left;
+    font-size: 40px;
+    line-height: 36px;
+    letter-spacing: -2px;
+  }
+
+  .grid-item-6 {
+    grid-area: audience;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .grid-item-7 {
+    grid-area: create-post;
+  }
+
+  .grid-item-8 {
+    grid-area: ai-content;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .grid-item-8 h2 {
+    font-size: 40px;
+    line-height: 36px;
+    letter-spacing: -2px;
+    max-width: unset;
+    max-width: 200px;
+  }
+}
